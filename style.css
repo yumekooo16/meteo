@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #6dd5fa, #ffffff);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* CSS : effet de fondu */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+html, body {
+    height: 95%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 8px;
+    margin-top:50px ;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    flex: 1; /* prend tout l’espace dispo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top:340px ;
+}
+

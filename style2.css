@@ -1,0 +1,321 @@
+/* Style de base du corps de la page */
+body  {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+        
+    background: linear-gradient(to bottom right, #6dd5fa, #ffffff); /* Dégradé bleu vers blanc */
+}
+
+
+/* S'assurer que la hauteur totale de html et body est suffisante */
+html, body {
+    height: 95%;
+}
+
+/* Taille standard des images */
+img {
+    width: 80px;
+}
+
+/* Taille de la température affichée en grand */
+.degres {
+    font-size: 4rem;
+}
+
+/* Style des icônes de nuages dans l’en-tête ou ailleurs */
+.nuage {
+    width: 40px;
+}
+
+/* Style de la zone en haut de page (titre, etc.) */
+.hautdepage {
+    padding: 20px;
+    padding-top: 0;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+}
+
+/* Température principale */
+#temperature {
+    font-size: 35px;
+}
+
+/* Température dans les prévisions journalières */
+.temperature {
+    font-size: 15px;
+    flex: 1;
+    font-weight: bold;
+}
+
+/* Description textuelle de la météo (ensoleillé, nuageux, etc.) */
+.description-meteo {
+    font-size: 15px;
+}
+
+/* Taille des icônes météo principales */
+.icone-meteo {
+    width: 100px;
+}
+
+/* Style des champs de saisie */
+input#recherche {
+    width: 280px;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    background: #f0f8ff; /* un bleu très clair */
+    color: #333;
+}
+
+input#recherche:focus {
+    background: white;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+}
+
+/* Conteneur des prévisions horaires */
+.previsions-horaires {
+    background-color: #D9D9D9;
+    border-radius: 1rem;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Conteneur horizontal des heures */
+.heures-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+/* Style individuel de chaque heure */
+.heure-horaire {
+    flex: 0 0 auto;
+    width: 11%;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 12.7px;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-weight: bolder;
+}
+
+/* Icône météo dans la carte horaire */
+.heure-horaire img {
+    width: 40px;
+    margin: 5px 0;
+}
+
+/* Icône d'horloge (petite) */
+.icone-horloge {
+    width: 15px;
+}
+
+/* Espacement des paragraphes */
+p {
+    margin: 2px;
+    gap: 2rem;
+}
+
+/* Conteneur des prévisions journalières mobile */
+.plustard {
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 1rem;
+    margin-top: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Titre des prévisions journalières */
+.plustard .titre {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Icône de calendrier */
+.icone-calendrier {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Une ligne contenant un jour, une icône, et la température */
+.jour {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+/* Nom du jour (lundi, mardi, etc.) */
+.nom-jour {
+    flex: 1;
+    text-transform: capitalize;
+}
+
+/* Icône de nuage dans la prévision journalière */
+.icone-nuage {
+    width: 40px;
+    margin: 0 10px;
+}
+
+/* Température dans la ligne du jour */
+.temperature {
+    flex: 1;
+    font-weight: bold;
+}
+
+/* Petit séparateur visuel */
+.separateur {
+    margin: 0 5px;
+}
+
+/* Style des liens */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Pied de page */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Centrer le formulaire de recherche */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Liste déroulante des suggestions */
+.suggestions-list {
+    width: 280px;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-top: 0;
+    background: white;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1500;
+    font-size: 16px;
+    color: #222;
+    list-style: none;
+    padding: 0;
+}
+
+/* Élément individuel de la liste de suggestions */
+.suggestion-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 0 30px 30px;
+}
+
+/* Conteneur pour les cartes de prévisions sur ordinateur */
+.plustard-desktop {
+    display: none; /* Caché par défaut (mobile) */
+}
+
+/* Disposition des cartes météo sur PC/tablette */
+.cartes-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* Carte individuelle de prévision météo (PC/tablette) */
+.carte-jour {
+    background-color: #d9d9d9a9;
+    border-radius: 10px;
+    width: 100px;
+    height: 150px;
+    padding: 5px 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Icône météo dans les cartes */
+.carte-jour img {
+    width: 80px;
+    margin: 5px auto;
+}
+
+/* Responsive : réglages pour écran ≥ 768px (tablette/PC) */
+@media screen and (min-width: 768px) {
+  
+  /* Champ de recherche stylisé pour PC/tablette */
+  input#recherche {
+    width: 320px;
+    font-size: 20px;
+    background: #d9d9d9a9;
+  }
+
+  .suggestions-list {
+    width: 320px;
+    font-size: 18px;
+    background: #d9d9d9a9;
+  }
+
+  /* Cacher les prévisions mobiles */
+  .plustard {
+    display: none;
+  }
+
+  /* Afficher les prévisions en cartes (PC/tablette) */
+  .plustard-desktop {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .carte-jour {
+    font-size: 20px;
+  }
+
+  .previsions-horaires {
+    background-color: #d9d9d9a9;
+  }
+
+  .heure-horaire {
+    background: none;
+    font-size: 15px;
+  }
+
+  .heure-horaire img {
+    width: 70px;
+    margin: 5px 0;
+  }
+}
