@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+    <link rel="stylesheet" href="./recherchemeteo.css">
+</head>
+<body>
+    <header>
+        <!-- Logo en haut de la page, cliquable, renvoie vers la page index2.html -->
+        <a href="./index.html">
+            <img src="./img/logosite.svg" alt="logo site" class="logo">
+        </a>
+    </header>
+   
+    <main>
+        <!-- Section principale affichant les infos météo actuelles -->
+        <div class="hautdepage">
+            <!-- Nom de la ville affichée -->
+            <p id="nom-ville"></p>
+
+            <!-- Température actuelle -->
+            <p id="temperature" class="temperature"></p>
+
+            <!-- Description de la météo -->
+            <p id="description-meteo" class="description-meteo"></p>
+
+            <!-- Icône météo correspondante -->
+            <img id="icone-meteo" class="icone-meteo"/>
+
+            <!-- Formulaire de recherche de ville -->
+            <form action="">
+                <!-- Liste des suggestions de ville (affichées dynamiquement) -->
+                <ul id="suggestions" style="list-style: none; padding: 0; margin-top: 5px;"></ul>
+
+                <!-- Champ de recherche -->
+                <input type="text" placeholder="Recherche" id="recherche">
+
+                <!-- Résultat ou message d'erreur affiché ici -->
+                <p id="resultat"></p>
+            </form>
+        </div>
+
+        <!-- Prévisions météo pour les prochaines heures -->
+        <section class="previsions-horaires">
+            <p class="titre">
+                <img src="./img/horloge.svg" alt="horloge" class="icone-horloge">
+                Prévisions prochaines heures
+            </p>
+
+            <!-- Conteneur qui recevra dynamiquement les prévisions horaires -->
+            <div class="heures-container"></div>
+        </section>
+
+        <!-- Section vide pour les prévisions futures (mobile) -->
+        <section class="plustard">
+        </section>
+
+        <!-- Deuxième version des prévisions horaires, probablement pour d'autres formats -->
+        <section class="previsions-horaires2">
+        </section>
+
+        <!-- Section dédiée aux cartes de prévisions sur tablette/ordinateur -->
+        <section class="plustard-desktop">
+            <div class="cartes-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Liens vers les pages secondaires du site -->
+        <p><a href="./a-propos.html">À propos</a> | <a href="./contact.html">Contact</a></p>
+
+        <!-- Copyright -->
+        <p>&copy;Wyatéo 2025</p>
+    </footer>
+
+    <!-- Inclusion du script JavaScript qui gère la logique météo -->
+    <script src="./recherchemeteo.js"></script>
+</body>
+</html>
